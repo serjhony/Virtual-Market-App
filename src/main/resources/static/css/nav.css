@@ -15,7 +15,7 @@
     z-index: 9;
 }
 
-.nav{
+.navinner{
     padding: 10px 10vw;
     display: flex;
     justify-content: space-between;

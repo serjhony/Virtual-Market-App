@@ -19,6 +19,7 @@ public class CustomerCartMapper {
 		customerCart.setProductName(product.getName());
 		customerCart.setQuantity(cartItem.getQuantity());
 		customerCart.setTotal(BigDecimal.valueOf(cartItem.getQuantity()).multiply(product.getPrice()));
+    customerCart.setMainImage(product.getMainImage());
 		return customerCart;
 	}
 }

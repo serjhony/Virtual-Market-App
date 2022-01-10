@@ -1,60 +1,87 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
+
 <head>
-<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/product.css">
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="/css/product.css">
 </head>
+
 <body>
 
-	<nav class="navbar"></nav>
-	<section class="product-details">
-	    <div class="image-slider">
-	        <div class="product-images">
-	            <img src="/img/product image 1.png" class="active" alt="">
-	            <img src="/img/product image 2.png" alt="">
-	            <img src="/img/product image 3.png" alt="">
-	            <img src="/img/product image 4.png" alt="">
-	        </div>
-	    </div>
-		<div class="details">
-	        <h2 class="product-brand">calvin klein</h2>
-	        <p class="product-category-des">Category: <a href="#product-category">Clothes</a></p>
-	        <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-	        <span class="product-price">$99</span>
-	        <span class="product-actual-price">$200</span>
-	        <span class="product-discount">( 50% off )</span>
-	
-	        <p class="product-sub-heading">select size</p>
-	
-	        <input type="radio" name="size" value="s" checked hidden id="s-size">
-	        <label for="s-size" class="size-radio-btn check">s</label>
-	        <input type="radio" name="size" value="m" hidden id="m-size">
-	        <label for="m-size" class="size-radio-btn">m</label>
-	        <input type="radio" name="size" value="l" hidden id="l-size">
-	        <label for="l-size" class="size-radio-btn">l</label>
-	        <input type="radio" name="size" value="xl" hidden id="xl-size">
-	        <label for="xl-size" class="size-radio-btn">xl</label>
-	        <input type="radio" name="size" value="xxl" hidden id="xxl-size">
-	        <label for="xxl-size" class="size-radio-btn">xxl</label>
-	
-	        <button class="btn cart-btn">add to cart</button>
-	        <button class="btn">add to wishlist</button>
-    	</div>
-	</section>
-	
-	<section class="detail-des">
-	    <h2 class="heading">description</h2>
-	    <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
-	</section>
-		
-		
-	<footer></footer>
+  <nav class="navbar">
+    <div class="navinner">
+      <a th:href="@{/store/index}">
+        <img src="/img/logo.png" class="brand-logo" alt="">
+      </a>
+      <div class="nav-items">
+        <div class="search">
+          <input type="text" class="search-box" placeholder="search brand, product">
+          <a th:href="@{/store/search}" class="search-btn">search</a>
+        </div>
+        <a class="profile-link" href="#"><img src="/img/user.png" alt=""></a>
+        <a th:href="@{/store/cart}"><img src="/img/cart.png" alt=""></a>
+        <a th:href="@{/store/logiout}"><img src="/img/giris.png" alt=""></a>
+      </div>
+    </div>
+    <ul class="links-container">
+      <li class="link-item"><a th:href="@{/store/index}" class="link">home</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">women</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">men</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">kids</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">accessories</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">market</a></li>
+      <li class="link-item-cart"><a class="link" th:href="@{/store/cart}">My Cart</a></li>
+    </ul>
+  </nav>
+  <div th:each="item: products">
+    <section class="product-details">
+      <div class="image-slider" th:style="'background-image:url(' + ${product.mainImage}+ ')'">
+        <div class="product-images">
+          <img th:src="${product.mainImage}" class="active" alt="">
+          <img src="https://source.unsplash.com/600x400?sig=1" alt="">
+          <img src="https://source.unsplash.com/600x400?sig=2" alt="">
+          <img src="https://source.unsplash.com/600x400?sig=3" alt="">
+        </div>
+      </div>
+      <div class="details">
+        <h2 class="product-brand" th:text="${product.name}"></h2>
+        <p class="product-category-des">Category: <a href="#product-category" th:text="${product.category}"></a></p>
+        <p class="product-short-des">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <span class="product-price" th:text="'$' + ${product.price}">$99</span>
 
-	<script src="/js/nav.js"></script>
-	<script src="/js/footer.js"></script>
-	<script src="/js/home.js"></script>
-	<script src="/js/product.js"></script>
+        <p class="product-sub-heading">select size</p>
+
+        <input type="radio" name="size" value="s" checked hidden id="s-size">
+        <label for="s-size" class="size-radio-btn check">s</label>
+        <input type="radio" name="size" value="m" hidden id="m-size">
+        <label for="m-size" class="size-radio-btn">m</label>
+        <input type="radio" name="size" value="l" hidden id="l-size">
+        <label for="l-size" class="size-radio-btn">l</label>
+        <input type="radio" name="size" value="xl" hidden id="xl-size">
+        <label for="xl-size" class="size-radio-btn">xl</label>
+        <input type="radio" name="size" value="xxl" hidden id="xxl-size">
+        <label for="xxl-size" class="size-radio-btn">xxl</label>
+
+        <button class="btn cart-btn">add to cart</button>
+        <button class="btn">add to wishlist</button>
+      </div>
+    </section>
+
+    <section class="detail-des">
+      <h2 class="heading">description</h2>
+      <p class="des">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, ......</p>
+    </section>
+  </div>
+
+
+  <footer></footer>
+
+  <script src="/js/footer.js"></script>
+  <script src="/js/home.js"></script>
+  <script src="/js/product.js"></script>
+  <script src="/js/home.js" type="text/javascript"></script>
 </body>
+
 </html>

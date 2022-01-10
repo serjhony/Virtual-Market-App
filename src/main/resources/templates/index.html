@@ -1,162 +1,82 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <meta charset="UTF-8">
-        <title>Insert title here</title>
-        <link rel="stylesheet" href="/css/home.css">
-    </head>
-    <body>
-    	<nav class="navbar">
-	    	<div class="nav">
-	            <img src="/img/dark-logo.png" class="brand-logo" alt="">
-	            <div class="nav-items">
-	                <div class="search">
-	                    <input type="text" class="search-box" placeholder="search brand, product">
-	                    <a th:href="@{/store/search}" class="search-btn">search</a>
-	                </div>
-	                <a href="#"><img src="/img/user.png" alt=""></a>
-	                <a th:href="@{/store/cart}"><img src="/img/cart.png" alt=""></a>
-					<a th:href="@{/store/logiout}"><img src="/img/giris.png" alt="" ></a>
-	            </div>
-	        </div>
-	        <ul class="links-container">
-	            <li class="link-item"><a href="#" class="link">home</a></li>
-	            <li class="link-item"><a href="#" class="link">women</a></li>
-	            <li class="link-item"><a href="#" class="link">men</a></li>
-	            <li class="link-item"><a href="#" class="link">kids</a></li>
-	            <li class="link-item"><a href="#" class="link">accessories</a></li>
-	            <li class="link-item-cart"><a class="link" th:href="@{/store/cart}">My Cart</a></li>
-	        </ul>
-        </nav>
-        <!-- hero section -->
-        <header class="hero-section">
-            <div class="content">
-                <img src="/img/light-logo.png" class="logo" alt="">
-                <p class="sub-heading">best fashion collection of all time</p>
-            </div>
-        </header>
-        <section class="product">
-            <h2 class="product-category">Best selling</h2>
-            <button class="pre-btn"><img src="/img/arrow.png" alt=""></button>
-            <button class="nxt-btn"><img src="/img/arrow.png" alt=""></button>
-            <div class="product-container">
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <a th:href="@{/store/product}"><img src="/img/card1.png" class="product-thumb" alt=""></a>
-	                    
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-	            <div class="product-card">
-	                <div class="product-image">
-	                    <span class="discount-tag">50% off</span>
-	                    <img src="/img/card1.png" class="product-thumb" alt="">
-	                    <button class="card-btn">add to whishlist</button>
-	                </div>
-	                <div class="product-info">
-	                    <h2 class="product-brand">brand</h2>
-	                    <p class="product-short-des">a short line about the cloth..</p>
-	                    <span class="price">$20</span><span class="actual-price">$40</span>
-	                </div>
-	            </div>
-            </div>
-        </section>
-        <!-- collections -->
-        <section class="collection-container">
-            <a href="#" class="collection">
-                <img src="/img/women-collection.png" alt="">
-                <p class="collection-title">women <br> apparels</p>
-            </a>
-            <a href="#" class="collection">
-                <img src="/img/men-collection.png" alt="">
-                <p class="collection-title">men <br> apparels</p>
-            </a>
-            <a href="#" class="collection">
-                <img src="/img/electronics.png" alt="">
-                <p class="collection-title">electronics</p>
-            </a>
-        </section>
-        <footer></footer>
-        
-        <script src="/js/home.js" type="text/javascript"></script>
-        <script src="/js/footer.js" type="text/javascript"></script>
-    </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Insert title here</title>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navinner">
+      <a th:href="@{/store/index}">
+        <img src="/img/logo.png" class="brand-logo" alt="">
+      </a>
+      <div class="nav-items">
+        <div class="search">
+          <input type="text" class="search-box" placeholder="search brand, product">
+          <a th:href="@{/store/search}" class="search-btn">search</a>
+        </div>
+        <a class="profile-link" href="#"><img src="/img/user.png" alt=""></a>
+        <a th:href="@{/store/cart}"><img src="/img/cart.png" alt=""></a>
+        <a th:href="@{/store/logiout}"><img src="/img/giris.png" alt=""></a>
+      </div>
+    </div>
+    <ul class="links-container">
+      <li class="link-item"><a th:href="@{/store/index}" class="link">home</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">women</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">men</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">kids</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">accessories</a></li>
+      <li class="link-item"><a th:href="@{/store/products}" class="link">market</a></li>
+      <li class="link-item-cart"><a class="link" th:href="@{/store/cart}">My Cart</a></li>
+    </ul>
+  </nav>
+  <!-- hero section -->
+  <header class="hero-section">
+    <div class="content">
+    </div>
+  </header>
+  <section class="product">
+    <h2 class="product-category">Best selling</h2>
+    <button class="pre-btn"><img src="/img/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="/img/arrow.png" alt=""></button>
+    <div class="product-container">
+      <div class="product-card" th:each="product: ${products}">
+        <div class="product-image">
+          <span class="discount-tag">50% off</span>
+          <a th:href="@{/store/product/{id}(id=${product.id})}"><img th:src="${product.mainImage}" class="product-thumb"
+              alt=""></a>
+          <button class="card-btn">add to whishlist</button>
+        </div>
+        <div class="product-info">
+          <h2 class="product-brand" th:text="${product.name}">brand</h2>
+          <p class="product-short-des" th:Text="${product.shortDesc}">a short line about the cloth..</p>
+          <span class="price">$20</span><span class="actual-price">$40</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- collections -->
+  <section class="collection-container">
+    <a th:href="@{/store/products}" class="collection">
+      <img src="/img/women-collection.png" alt="">
+      <p class="collection-title">women <br> apparels</p>
+    </a>
+    <a th:href="@{/store/products}" class="collection">
+      <img src="/img/men-collection.png" alt="">
+      <p class="collection-title">men <br> apparels</p>
+    </a>
+    <a th:href="@{/store/products}" class="collection">
+      <img src="/img/electronics.png" alt="">
+      <p class="collection-title">electronics</p>
+    </a>
+  </section>
+  <footer></footer>
+
+  <script src="/js/home.js" type="text/javascript"></script>
+  <script src="/js/footer.js" type="text/javascript"></script>
+</body>
+
 </html>

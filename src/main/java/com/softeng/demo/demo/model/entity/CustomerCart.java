@@ -18,5 +18,6 @@ public class CustomerCart {
 	private String productName;
 	private String name;
 	private BigDecimal total;
+  private String mainImage;
 	
 }
