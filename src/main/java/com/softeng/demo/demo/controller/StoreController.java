@@ -38,6 +38,12 @@ public class StoreController {
     return "products";
   }
 
+  @GetMapping("/marketManager")
+  public String managerPage(Model model) {
+    // model.addAttribute(attributeName, attributeValue)
+    return "manager";
+  }
+
 	@GetMapping("/search")
 	public String searchPage(Model model) {
 		return "search";

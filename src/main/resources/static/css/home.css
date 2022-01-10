@@ -16,6 +16,11 @@
 	text-decoration: none;
 }
 
+.market-manager-link {
+  text-decoration: none;
+  color: #383838;
+}
+
 .hero-section .logo{
     height: 150px;
     display: block;
