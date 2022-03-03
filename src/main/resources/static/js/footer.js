@@ -39,7 +39,7 @@ const createFooter = () => {
     </div>
     <p class="footer-title">about company</p>
     <p class="info">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat tempore ad suscipit, eos eius quisquam sed optio nisi quaerat fugiat ratione.</p>
-    <p class="info">support emails - help@clothing.com, customersupport@clothing.com</p>
+    <p class="info">support emails - help@ege.com, customersupport@ege.com</p>
     <p class="info">telephone - 180 00 00 001, 180 00 00 002</p>
     <div class="footer-social-container">
         <div>

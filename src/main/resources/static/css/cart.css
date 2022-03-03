@@ -1,6 +1,5 @@
 @charset "UTF-8";
-/* @import 'nav.css';
-@import 'footer.css'; */
+
 @import url('https://fonts.googleapis.com/css?family=Martel+Sans:400,700,900&display=swap');
 
 .value-button {
@@ -26,21 +25,21 @@
 }
 
 #field1 {
-  display: flex;                  /* establish flex container */
-  flex-direction: row;            /* default value; can be omitted */
-  flex-wrap: wrap;              /* default value; can be omitted */
-  justify-content: space-between; /* switched from default (flex-start, see below) */
+  display: flex;                 
+  flex-direction: row;            
+  flex-wrap: wrap;              
+  justify-content: space-between; 
   justify-content: left;
 }
 
-/* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
+
 input[type=number] {
   -moz-appearance: textfield;
 }
@@ -187,13 +186,6 @@ button:hover{
 .container-table100 {
   margin-top: 5px;
   width: 100%;
-  /* min-height: 100vh; */
-  /* background: #c850c0; */
-  /* background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
-  background: -o-linear-gradient(45deg, #4158d0, #c850c0);
-  background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
-  background: linear-gradient(45deg, #4158d0, #c850c0); */
-
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

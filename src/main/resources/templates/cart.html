@@ -237,7 +237,7 @@
     function getCartItemsId() {
       var cartIdString = "";
       $(".cartId").each(function (index, element) {
-        cartIdString += $(this).attr("pid");
+        cartIdString += ($(this).attr("pid") + ",");
       });
       console.log("cardIDstring " + cartIdString);
       return cartIdString;

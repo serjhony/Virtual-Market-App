@@ -18,7 +18,7 @@
   /*border: 1px solid grey;*/
   padding: 0px;
   width: 24%;
-  box-sizing: border-box; /*content-box|border-box|initial|inherit;*/
+  box-sizing: border-box; 
 }
 .list-group-column {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
